@@ -12,13 +12,28 @@
             <img src="https://media0.giphy.com/media/T86i6yDyOYz7J6dPhf/giphy.gif" alt="Cute animated illustration">
         </div>
         <div class="quiz">
-            <h2 class="quiz_question">Congratulations! Let's celebrate with a quiz:</h2>
+            <h2 class="quiz_question">WAIT! Let's make sure you're Valentine material...</h2>
             <form id="quizForm">
-                <label for="q1">1. What is your favorite color?</label>
-                <input type="text" id="q1" name="q1" required>
+                <!-- Question 1 -->
+                <p>1. What's Mahas's favorite color?</p>
+                <label><input type="radio" name="q1" value="red"> Red</label>
+                <label><input type="radio" name="q1" value="blue"> Blue</label>
+                <label><input type="radio" name="q1" value="green"> Green</label>
+                <label><input type="radio" name="q1" value="purple"> Purple</label>
 
-                <label for="q2">2. What is your favorite food?</label>
-                <input type="text" id="q2" name="q2" required>
+                <!-- Question 2 -->
+                <p>2. Who is Mahas's favorite artist?</p>
+                <label><input type="radio" name="q2" value="drake"> Drake</label>
+                <label><input type="radio" name="q2" value="daniel"> Daniel Ceaser</label>
+                <label><input type="radio" name="q2" value="Facking yeat"> yeat</label>
+                <label><input type="radio" name="q2" value="weeknd"> The Weeknd</label>
+
+                <!-- Question 3 -->
+                <p>3. Who does Mahas love the most?</p>
+                <label><input type="radio" name="q3" value="zoya"> Zoya</label>
+                <label><input type="radio" name="q3" value="zoya"> Zoya</label>
+                <label><input type="radio" name="q3" value="zoya"> Zoya</label>
+                <label><input type="radio" name="q3" value="zoya"> Zoya</label>
 
                 <button type="button" onclick="submitQuiz()">Submit</button>
             </form>
@@ -27,10 +42,22 @@
 
     <script>
         function submitQuiz() {
-            // You can handle the quiz submission here, for example, by displaying the answers or redirecting to another page.
-            alert("Quiz submitted! You can handle the results in JavaScript.");
-            // You can also redirect to another page if needed.
-            window.location.href = "quiz_results.html";
+            // Collect user's answers
+            var answer1 = document.querySelector('input[name="q1"]:checked');
+            var answer2 = document.querySelector('input[name="q2"]:checked');
+            var answer3 = document.querySelector('input[name="q3"]:checked');
+
+            // Check if all questions are answered
+            if (answer1 && answer2 && answer3) {
+                // Check answers
+                if (answer1.value === "purple" && answer2.value === "weeknd" && answer3.value === "zoya") {
+                    alert("Congratulations! You're Valentine material!");
+                } else {
+                    alert("Oops! It seems like you need to know Mahas better.");
+                }
+            } else {
+                alert("Please answer all the questions.");
+            }
         }
     </script>
 </body>
