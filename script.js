@@ -1,21 +1,34 @@
-let currentQuestion = 1;
+body {
+    font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+    text-align: center;
+    background: url('hellokitty_background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #ff69b4;
+    margin: 0;
+}
 
-function checkAnswer(questionId, correctAnswer) {
-    const selectedAnswer = document.querySelector(`#${questionId} li button:hover`).innerText;
-    const resultMessage = document.getElementById('resultMessage');
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-    if (selectedAnswer === correctAnswer) {
-        resultMessage.innerHTML = `Correct!`;
-    } else {
-        resultMessage.innerHTML = `Incorrect! The correct answer is ${correctAnswer}.`;
-    }
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #ff69b4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
 
-    document.getElementById(questionId).style.display = 'none';
-    currentQuestion++;
+button:hover {
+    background-color: #ff3385;
+}
 
-    if (currentQuestion <= 3) {
-        document.getElementById(`question${currentQuestion}`).style.display = 'block';
-    } else {
-        document.getElementById('result').style.display = 'block';
-    }
+.question {
+    margin-top: 20px;
 }
