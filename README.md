@@ -10,7 +10,8 @@
     <div id="introContainer" class="container">
         <h1>By Your MAHAS</h1>
         <p>Hey Zoya, will you be my Valentine?</p>
-        <button onclick="startGame()">Start Game</button>
+        <button onclick="startQuiz('Yes')">Yes</button>
+        <button onclick="endGame('No')">No</button>
     </div>
 
     <div id="quizContainer" class="container" style="display:none;">
@@ -25,7 +26,39 @@
             </ul>
             <p id="q1"></p>
         </div>
-        <!-- Similar structure for other questions -->
+
+        <div id="question2" class="question" style="display:none;">
+            <p>Who's his favorite artist?</p>
+            <ul>
+                <li><button onclick="checkAnswer('q2', 'drake')">Drake</button></li>
+                <li><button onclick="checkAnswer('q2', 'daniel')">Daniel Caesar</button></li>
+                <li><button onclick="checkAnswer('q2', 'kanye')">Kanye</button></li>
+                <li><button onclick="checkAnswer('q2', 'weeknd')">The Weeknd</button></li>
+            </ul>
+            <p id="q2"></p>
+        </div>
+
+        <div id="question3" class="question" style="display:none;">
+            <p>Who does he love the most in the whole wide world?</p>
+            <ul>
+                <li><button onclick="checkAnswer('q3', 'zoya')">Zoya</button></li>
+                <li><button onclick="checkAnswer('q3', 'zara')">Zara</button></li>
+                <li><button onclick="checkAnswer('q3', 'zoey')">Zoey</button></li>
+                <li><button onclick="checkAnswer('q3', 'zain')">Zain</button></li>
+            </ul>
+            <p id="q3"></p>
+        </div>
+
+        <div id="question4" class="question" style="display:none;">
+            <p>What's his favorite food?</p>
+            <ul>
+                <li><button onclick="checkAnswer('q4', 'sushi')">Sushi</button></li>
+                <li><button onclick="checkAnswer('q4', 'pizza')">Pizza</button></li>
+                <li><button onclick="checkAnswer('q4', 'tacos')">Tacos</button></li>
+                <li><button onclick="checkAnswer('q4', 'pasta')">Pasta</button></li>
+            </ul>
+            <p id="q4"></p>
+        </div>
 
         <div id="result" class="question" style="display:none;">
             <p id="resultMessage"></p>
