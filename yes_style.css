@@ -1,23 +1,48 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: rgb(189, 225, 122);
-}
+<!-- Add this to your yes_style.css file -->
+<style>
+    .quiz {
+        background-color: #f8bbd0; /* Light pink background for the quiz section */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
 
-.header_text {
-    font-family: 'Nunito';
-    font-size: 50px;
-    font-weight: bold;
-    color: white;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 0px;
-}
+    .btn {
+        background-color: #ffcdd2; /* Light red for buttons */
+        color: #e91e63; /* Pink text color */
+        padding: 15px 32px;
+        text-align: center;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border: none;
+        border-radius: 12px;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
 
-.gif_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    .btn:hover {
+        background-color: #e91e63; /* Darker pink on hover */
+        color: #fff; /* White text color on hover */
+        transform: scale(1.05); /* Slight scale on hover */
+    }
+
+    .feedback {
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    .progress-bar {
+        background-color: #81c784; /* Light green for progress bar */
+        height: 10px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    .progress {
+        background-color: #4caf50; /* Dark green for progress */
+        height: 100%;
+        border-radius: 5px;
+        transition: width 0.5s ease;
+    }
+</style>
