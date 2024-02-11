@@ -6,7 +6,7 @@ function startGame() {
 }
 
 function checkAnswer(questionId, correctAnswer) {
-    const selectedAnswer = document.querySelector(`#${questionId} li button:hover`).innerText;
+    const selectedAnswer = document.querySelector(`#${questionId} ul li button:hover, #${questionId} ul li span:hover`).innerText;
     const resultMessage = document.getElementById('resultMessage');
 
     if (selectedAnswer === correctAnswer) {
