@@ -8,7 +8,7 @@
 </head>
 <body>
     <div id="introContainer" class="container">
-        <h1>Hello Kitty Valentine's Adventure</h1>
+        <h1>By Your MAHAS</h1>
         <p>Hey Zoya, will you be my Valentine?</p>
         <button onclick="startGame()">Start Game</button>
     </div>
@@ -25,31 +25,18 @@
             </ul>
             <p id="q1"></p>
         </div>
-        <div id="question2" class="question" style="display:none;">
-            <p>Who's his favorite artist?</p>
-            <ul>
-                <li><button onclick="checkAnswer('q2', 'drake')">Drake</button></li>
-                <li><button onclick="checkAnswer('q2', 'daniel')">Daniel Caesar</button></li>
-                <li><button onclick="checkAnswer('q2', 'kanye')">Kanye</button></li>
-                <li><button onclick="checkAnswer('q2', 'weeknd')">The Weeknd</button></li>
-            </ul>
-            <p id="q2"></p>
-        </div>
-        <div id="question3" class="question" style="display:none;">
-            <p>Who does he love the most in the whole wide world?</p>
-            <ul>
-                <li><button onclick="checkAnswer('q3', 'zoya')">Zoya</button></li>
-                <li><button onclick="checkAnswer('q3', 'zoya')">Zoya</button></li>
-                <li><button onclick="checkAnswer('q3', 'zoya')">Zoya</button></li>
-                <li><button onclick="checkAnswer('q3', 'zoya')">Zoya</button></li>
-            </ul>
-            <p id="q3"></p>
-        </div>
+        <!-- Similar structure for other questions -->
+
         <div id="result" class="question" style="display:none;">
             <p id="resultMessage"></p>
             <p>Now, here's a special message for you:</p>
             <p>Dear Zoya,</p>
             <p>I love you more than words can express. You mean the world to me, and I am grateful to have you in my life. Happy Valentine's Day!</p>
+            <!-- Add baby pictures here -->
+            <div>
+                <img src="mahas_baby_picture.jpg" alt="Mahas Baby Picture" style="max-width: 100%; margin-top: 20px;">
+                <img src="zoya_baby_picture.jpg" alt="Zoya Baby Picture" style="max-width: 100%; margin-top: 20px;">
+            </div>
         </div>
     </div>
 
