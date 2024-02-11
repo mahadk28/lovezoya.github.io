@@ -1,18 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link rel="stylesheet" href="./yes_style.css">
-        
-    </head> 
-    <body>
-        <div class="container">
-            <div >
-                <h1 class = "header_text">Hurrayyyy!!</h1>
-            </div>
-            <div class="gif_container">
-                <img src="https://media0.giphy.com/media/T86i6yDyOYz7J6dPhf/giphy.gif" alt="Cute animated illustration">
-            </div>
+<head>
+    <link rel="stylesheet" href="./yes_style.css">
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1 class="header_text">Hurrayyyy!!</h1>
         </div>
-       
-    </body> 
+        <div class="gif_container">
+            <img src="https://media0.giphy.com/media/T86i6yDyOYz7J6dPhf/giphy.gif" alt="Cute animated illustration">
+        </div>
+        <div class="quiz">
+            <h2 class="quiz_question">Congratulations! Let's celebrate with a quiz:</h2>
+            <form id="quizForm">
+                <label for="q1">1. What is your favorite color?</label>
+                <input type="text" id="q1" name="q1" required>
+
+                <label for="q2">2. What is your favorite food?</label>
+                <input type="text" id="q2" name="q2" required>
+
+                <button type="button" onclick="submitQuiz()">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function submitQuiz() {
+            // You can handle the quiz submission here, for example, by displaying the answers or redirecting to another page.
+            alert("Quiz submitted! You can handle the results in JavaScript.");
+            // You can also redirect to another page if needed.
+            window.location.href = "quiz_results.html";
+        }
+    </script>
+</body>
 </html>
