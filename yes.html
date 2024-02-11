@@ -48,17 +48,16 @@
             var answer3 = document.querySelector('input[name="q3"]:checked');
 
             // Check if all questions are answered
-            if (answer1 && answer2 && answer3) {
-                // Check answers
-                if (answer1.value === "purple" && answer2.value === "weeknd" && answer3.value === "zoya") {
-                    alert("Congratulations! You're Valentine material!");
-                } else {
-                    alert("Oops! It seems like you need to know Mahas better.");
-                }
+           if (answer1 && answer2 && answer3) {
+            // Check answers
+            if (answer1.value === "purple" && answer2.value === "weeknd" && answer3.value === "zoya") {
+                // Redirect to valentine_message.html if all answers are correct
+                window.location.href = "valentine_message.html";
             } else {
-                alert("Please answer all the questions.");
+                alert("Oops! It seems like you need to know Mahas better.");
             }
+        } else {
+            alert("Please answer all the questions.");
         }
-    </script>
-</body>
-</html>
+    }
+</script>
